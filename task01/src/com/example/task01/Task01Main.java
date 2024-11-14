@@ -1,15 +1,21 @@
 package com.example.task01;
 
+import java.nio.charset.StandardCharsets;
+
 public class Task01Main {
     public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
         codeWithNPE();
-         */
+
     }
 
-    static void codeWithNPE() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+    static void codeWithNPE(){
+        try {
+            String test = null; //Любой ссылчный тип данных
+            System.out.println(test.getBytes(StandardCharsets.UTF_8));
+        }
+        catch (NullPointerException e){
+            System.out.println(e);
+        }
+
     }
 }
